@@ -13,33 +13,58 @@
         <span>Кухарія</span>
     </div>
     <nav>
-      <a href="index.html">Рецепти</a>
-      <a href="#">Інгредієнти</a>
+      <a href="about.html">Про нас</a>
+      <a href="contacts.html">Контакти</a>
+      <a href="recipe.html">Випадковий рецепт</a>
     </nav>
     <div class="icons">
-      <span class="search">🔍</span>
       <span class="lang">En</span>
-      <a href="account.html" class="user">👤</a>
+      <a href="login.html">
+        <img src="images/account.png" alt="Мій профіль" class="account-img"></a>
     </div>
   </header>
 
   <main>
     <section class="search-section">
       <h2>Що готуємо сьогодні?</h2>
-      <input type="text" placeholder="наприклад: лимонний торт">
+      <div class="search-box">
+        <input type="text" placeholder="наприклад: лимонний торт">
+        <img src="images/search.png" alt="Пошук" class="icon-btn">
+        <img src="images/filters.png" alt="Фільтри" class="icon-btn">
+      </div>
     </section>
 
     <section class="featured">
       <h2>Популярні рецепти</h2>
       <div class="recipe-grid">
-        <div class="recipe-card">❤️</div>
-        <div class="recipe-card">❤️</div>
-        <div class="recipe-card">❤️</div>
-        <div class="recipe-card">❤️</div>
-        <div class="recipe-card">❤️</div>
-        <div class="recipe-card">❤️</div>
+        <div class="recipe-item">
+          <a href="recipe.html" class="recipe-title">Лимонний торт</a>
+          <div class="recipe-card"></div>
+        </div>
+        <div class="recipe-item">
+          <a href="recipe.html" class="recipe-title">Борщ український</a>
+          <div class="recipe-card"></div>
+        </div>
+        <div class="recipe-item">
+          <a href="recipe.html" class="recipe-title">Олів’є класичний</a>
+          <div class="recipe-card"></div>
+        </div>
+        <div class="recipe-item">
+          <a href="recipe.html" class="recipe-title">Сирники з родзинками</a>
+          <div class="recipe-card"></div>
+        </div>
+        <div class="recipe-item">
+          <a href="recipe.html" class="recipe-title">Вареники з вишнею</a>
+          <div class="recipe-card"></div>
+        </div>
+        <div class="recipe-item">
+          <a href="recipe.html" class="recipe-title">Млинці з медом</a>
+          <div class="recipe-card"></div>
+        </div>
       </div>
     </section>
+
+
   </main>
 
   <footer>

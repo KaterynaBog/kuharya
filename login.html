@@ -9,30 +9,39 @@
 <body>
   <header class="header">
     <div class="logo">
-        <img src="images/logo.png" alt="Кухарія" class="logo-img">
-        <span>Кухарія</span>
+      <img src="images/logo.png" alt="Кухарія" class="logo-img">
+      <span>Кухарія</span>
     </div>
     <nav>
       <a href="index.html">Головна</a>
     </nav>
   </header>
 
-  <main class="login">
-    <h1>Вхід до акаунту</h1>
-    <form onsubmit="return false;">
-      <label>Електронна пошта:</label><br>
-      <input type="email" placeholder="example@gmail.com"><br><br>
+  <main class="login-page">
+    <div class="login-container">
+      <h2 id="form-title">Вхід</h2>
 
-      <label>Пароль:</label><br>
-      <input type="password" placeholder="********"><br><br>
+      <form id="login-form" class="active">
+        <input type="text" placeholder="Електронна пошта">
+        <input type="password" placeholder="Пароль">
+        <button type="button" onclick="window.location.href='account.html'">Увійти</button>
+        <p>Ще не маєте акаунту? <a href="#" id="show-register">Зареєструйтесь</a></p>
+      </form>
 
-      <button type="submit">Увійти</button>
-      <p>Ще не маєте акаунту? <a href="#">Зареєструйтеся</a></p>
-    </form>
+      <form id="register-form">
+        <input type="text" placeholder="Ім’я">
+        <input type="email" placeholder="Електронна пошта">
+        <input type="password" placeholder="Пароль">
+        <button type="button" onclick="window.location.href='account.html'">Зареєструватись</button>
+        <p>Вже маєте акаунт? <a href="#" id="show-login">Увійдіть</a></p>
+      </form>
+    </div>
   </main>
 
   <footer>
     <p>&copy; 2025 Кухарія</p>
   </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

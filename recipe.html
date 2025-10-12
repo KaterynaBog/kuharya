@@ -3,33 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Назва рецепта — Кухарія</title>
+  <title>Випадковий рецепт — Кухарія</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="header">
     <div class="logo">
-        <img src="images/logo.png" alt="Кухарія" class="logo-img">
-        <span>Кухарія</span>
+      <img src="images/logo.png" alt="Кухарія" class="logo-img">
+      <span>Кухарія</span>
     </div>
+
     <nav>
-      <a href="index.html">Рецепти</a>
-      <a href="#">Інгредієнти</a>
+      <a href="index.html">Головна</a>
+      <a href="about.html">Про нас</a>
+      <a href="contacts.html">Контакти</a>
+      <a href="recipe.html">Випадковий рецепт</a>
     </nav>
+
     <div class="icons">
-      <span>🔍</span>
-      <span>En</span>
-      <a href="account.html">👤</a>
+      <span class="lang">En</span>
+      <a href="login.html">
+        <img src="images/account.png" alt="Мій профіль" class="account-img">
+      </a>
     </div>
   </header>
 
-  <main>
+  <main class="recipe-page">
     <section class="recipe-header">
-      <p class="breadcrumbs">Категорія 1 > Категорія 2 > Поточна сторінка</p>
       <h1>Лимонний торт</h1>
       <p class="meta">Автор: @cookUA | 2 год | Для початківців</p>
       <div class="actions">
-        <span>🔖 Збережено</span>
+        <div class="saved-icon">
+          <img src="images/saved.png" alt="Збережено" class="saved-img">
+          <span>Збережено</span>
+        </div>
         <span>❤️ 5 вподобань</span>
       </div>
     </section>
