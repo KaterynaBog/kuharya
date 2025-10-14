@@ -1,13 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".recipe-card");
-
-  cards.forEach(card => {
-    card.addEventListener("click", () => {
-      card.classList.toggle("liked");
-    });
-  });
-});
-
 // --------------------- Вхід / Реєстрація ---------------------
 document.addEventListener("DOMContentLoaded", () => {
   const showRegister = document.getElementById("show-register");
