@@ -103,6 +103,23 @@ nav a:hover {           /* ефект при наведенні */
   gap: 10px;
   align-items: center;
 }
+/* -----------------Стиль для позначення МОВИ-----  */
+.lang {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #040404;          
+  padding: 4px 0px;
+  border-radius: 12px;
+  cursor: default;
+  user-select: none;
+  transition: color 0.3s;
+}
+
+.lang:hover {
+  color: #bd2c2c;
+}
+
 
 .search-section {
   background: #f0f0f0;
@@ -469,4 +486,66 @@ footer {
 /* Стан активності форми */
 #register-form {
   display: none;
+}
+/* --------------------------Бергер меню */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #bd2c2c;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* --- Медіазапити для планшетів і телефонів --- За замовчування сховали */
+@media (max-width: 768px) {
+  nav {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #fff;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    padding: 10px 0;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    margin: 10px 0;
+    font-size: 20px;
+  }
+
+  .burger {
+    display: flex; /* показуємо лише на малих екранах */
+  }
+
+  /* .icons {
+    display: none;
+  }  <-- прибрано */
+}
+
+/* --- Анімація при відкритті --- */
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(6px);
+}
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-6px);
 }
