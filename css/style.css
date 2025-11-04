@@ -4,7 +4,56 @@ body {
   background: #fff;
   color: #222;
 }
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@600;700&family=Great+Vibes&display=swap');
+/* Оформлюємо єдиний стиль для сайту */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  color: #bd2c2c;
+  margin-top: 0;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
 
+/* Абзаци */
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+/* Посилання */
+a {
+  color: #bd2c2c;
+  text-decoration: none;
+  transition: 0.3s;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Списки */
+ul, ol {
+  margin: 10px 0 15px 25px;
+  line-height: 1.6;
+}
+
+/* Таблиці */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background: #f7f7f7;
+  font-weight: 600;
+}
 header.header {
   display: flex;
   justify-content: space-between;
@@ -24,10 +73,11 @@ header.header {
 }
 
 .logo span {
-  font-size: 22px;
-  font-weight: bold;
-  color: #040404; 
-  letter-spacing: 0.5px;
+  font-family: "Great Vibes", cursive;
+  font-size: 25px;
+  color: #040404;
+  letter-spacing: 0px;
+  font-weight: 550;
 }
 
 
@@ -36,9 +86,10 @@ nav a {                   /* редагування заголовків */
   text-decoration: none;
   color: #000;             
   font-size: 18px;        
-  font-weight: 600;        
+  font-weight: bold;        
   text-transform: none;    
-  transition: color 0.3s;  
+  transition: color 0.3s;
+  font-family: "Montserrat", sans-serif;  
 }
 
 
@@ -380,7 +431,7 @@ footer {
   padding: 10px;
   margin: 8px 0;
   border: 1px solid #bd2c2c;
-  border-radius: 20%;
+  border-radius: 20px;
   outline: none;
 }
 
