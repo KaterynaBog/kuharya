@@ -1,0 +1,116 @@
+header.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 40px;  /* розмір  лого */
+  width: auto;
+}
+
+.logo span {
+  font-family: "Great Vibes", cursive;
+  font-size: 25px;
+  color: #040404;
+  letter-spacing: 0px;
+  font-weight: 550;
+}
+
+nav a {                   /* редагування заголовків */
+  margin: 0 20px;          /* відстань між пунктами меню */
+  text-decoration: none;
+  color: #000;             
+  font-size: 18px;        
+  font-weight: bold;        
+  text-transform: none;    
+  transition: color 0.3s;
+  font-family: "Montserrat", sans-serif;  
+}
+
+nav a:hover {           /* ефект при наведенні */
+  color: #bd2c2c;     
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #f5f5f5;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Стан активності форми */
+#register-form {
+  display: none;
+}
+
+/* --------------------------Бергер меню */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #bd2c2c;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* --- Медіазапити для планшетів і телефонів --- За замовчування сховали */
+@media (max-width: 768px) {
+  nav {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #fff;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    padding: 10px 0;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    margin: 10px 0;
+    font-size: 20px;
+  }
+
+  .burger {
+    display: flex; /* показуємо лише на малих екранах */
+  }
+
+  /* .icons {
+    display: none;
+  }  <-- прибрано */
+}
+
+/* --- Анімація при відкритті --- */
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(6px);
+}
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-6px);
+}
