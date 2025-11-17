@@ -479,6 +479,7 @@ footer {
   border-radius: 2px;
   transition: 0.3s;
 }
+
 .burger.active span:nth-child(1) {
   transform: rotate(45deg) translateY(6px);
 }
@@ -490,12 +491,37 @@ footer {
 }
 
 /* --------------------------АДАПТИВНІСТЬ-------------------------- */
+@media (max-width: 1200px) {
+  .recipe-page {
+    padding: 30px 40px;
+  }
+  .recipe-photo {
+    width: 70%;
+  }
+}
+
+@media (max-width: 992px) {
+  header.header {
+    padding: 10px 30px;
+  }
+  .recipe-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .account-page {
+    padding: 40px;
+  }
+  .recipe-photo {
+    width: 80%;
+  }
+}
+
 @media (max-width: 900px) {
   .recipe-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (max-width: 768px) {
+
+@media (max-width: 900px) {
   nav {
     display: none;
     flex-direction: column;
@@ -518,11 +544,36 @@ footer {
   .burger {
     display: flex;
   }
+  main {
+    padding: 0 10px;
+  }
+  .featured {
+    padding: 20px;
+  }
+  .recipe-title {
+    font-size: 15px;
+  }
+  .recipe-card {
+    height: 160px;
+  }
+  .about-content,
+  .contacts-content {
+    padding: 0 10px;
+  }
+  .account-page {
+    padding: 30px;
+  }
+  .account-content h1 {
+    font-size: 26px;
+  }
+  .login-page {
+    padding: 20px;
+  }
   .recipe-page {
     padding: 20px;
   }
   .recipe-header h1 {
-    font-size: 26px;
+    font-size: 24px;
   }
   .recipe-header .meta {
     font-size: 14px;
@@ -534,20 +585,25 @@ footer {
     font-size: 14px;
   }
   .directions h2 {
-    font-size: 20px;
+    font-size: 18px;
+  }
+  .ingredients p {
+    padding: 0 15px;
+    font-size: 16px;
+    text-align: justify;
   }
   .recipe-photo {
     width: 90%;
     max-width: 100%;
+    margin: 15px auto;
+    display: block;
   }
 }
+
 @media (max-width: 600px) {
   .recipe-grid {
     grid-template-columns: 1fr;
     gap: 20px;
-  }
-  .recipe-item {
-    text-align: left;
   }
   .recipe-card {
     height: 220px;
@@ -556,18 +612,90 @@ footer {
     font-size: 18px;
   }
 }
-@media (max-width: 768px) {
-  .ingredients p {
-    padding: 0 15px;      
-    font-size: 16px;     
-    text-align: justify;  
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
   }
-}
-@media (max-width: 768px) {
+  header.header {
+    padding: 10px 20px;
+  }
+  .logo span {
+    font-size: 22px;
+  }
+  nav a {
+    font-size: 18px;
+  }
+  .search-section {
+    padding: 25px 10px;
+  }
+  .search-box {
+    gap: 6px;
+  }
+  .search-box input {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  .icon-btn {
+    width: 24px;
+    height: 24px;
+  }
+  .search-section h2 {
+    font-size: 20px;
+  }
+  .about,
+  .contacts {
+    padding: 15px;
+  }
+  .about-content h1,
+  .contacts-content h1 {
+    font-size: 24px;
+  }
+  .about-content p,
+  .contacts-content p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .account-page {
+    padding: 20px;
+  }
+  .profile-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-photo {
+    width: 90px;
+    height: 90px;
+  }
+  .profile-data p {
+    font-size: 16px;
+  }
+  .favorites h2 {
+    font-size: 20px;
+  }
+  .login-container {
+    padding: 25px;
+    max-width: 300px;
+  }
+  .login-container input {
+    font-size: 14px;
+  }
+  .recipe-page {
+    padding: 15px;
+  }
+  .recipe-header h1 {
+    font-size: 22px;
+  }
+  .recipe-header .meta {
+    font-size: 13px;
+  }
   .recipe-photo {
-    width: 90%;
-    max-width: 100%;
-    margin: 15px auto;   /* центруємо зображення */
-    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+  .directions ol li,
+  .ingredients ul li,
+  .ingredients p {
+    font-size: 16px;
   }
 }
