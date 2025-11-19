@@ -1,0 +1,400 @@
+
+/* -----------------ГОЛОВНА СТОРІНКА (РЕЦЕПТИ)----------------- */
+.recipe-item {
+  text-align: left;
+}
+.recipe-title {
+  display: block;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+.recipe-title:hover {
+  color: #bd2c2c;
+  text-decoration: underline;
+}
+
+/* --------------------------СТОРІНКА ПРО НАС-------------------------- */
+
+.about-content h1 {
+  font-size: 32px;
+  color: #bd2c2c;
+  margin-bottom: 20px;
+}
+.about-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+
+/* --------------------------СТОРІНКА КОНТАКТИ-------------------------- */
+
+.contacts-content h1 {
+  font-size: 32px;
+  color: #bd2c2c;
+  margin-bottom: 20px;
+}
+.contacts-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+.contacts-content ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+.contacts-content li {
+  margin: 5px 0;
+}
+.contacts-content a {
+  color: #bd2c2c;
+  text-decoration: none;
+}
+.contacts-content a:hover {
+  text-decoration: underline;
+}
+
+/* --------------------------СТОРІНКА АКАУНТУ-------------------------- */
+
+.account-content h1 {
+  font-size: 32px;
+  color: #bd2c2c;
+  margin-bottom: 30px;
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  background: #ddd;
+  border-radius: 50%;
+  border: 2px solid #bd2c2c;
+}
+.profile-data p {
+  font-size: 18px;
+  margin: 8px 0;
+}
+.favorites h2 {
+  font-size: 24px;
+  color: #000;
+  margin-bottom: 15px;
+  margin-top: 40px;
+}
+
+
+/* --------------------------СТОРІНКА РЕЦЕПТУ-------------------------- */
+
+
+.recipe-header h1 {
+  font-size: 32px;
+  color: #bd2c2c;
+  margin-bottom: 10px;
+}
+
+
+.ingredients, .facts {
+  display: block;
+  width: 100%;
+  margin: 0 0 0 0;
+}
+.ingredients p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+}
+.ingredients ul li {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.directions h2 {
+  color: #bd2c2c;
+  margin-bottom: 10px;
+}
+.directions ol li {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+
+/* --- Заголовок "Трохи історії" --- */
+.history h2 {
+  text-align: left;
+  color: #bd2c2c;
+  font-family: "Montserrat", sans-serif;
+}
+.history p {
+  font-size: 18px;      
+  line-height: 1.8;     
+  color: #333;        
+  margin-bottom: 10px;  
+}
+
+/* === Іконка "Збережено" === */
+.saved-img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* ----------СТОРІНКА ВХОДУ / РЕЄСТРАЦІЇ------------------ */
+
+.login-container h2 {
+  color: #bd2c2c;
+  margin-bottom: 20px;
+}
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #bd2c2c;
+  border-radius: 20px;
+  outline: none;
+}
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background: #bd2c2c;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.login-container button:hover {
+  background: #a32626;
+}
+.login-container p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+.login-container a {
+  color: #bd2c2c;
+  text-decoration: none;
+  font-weight: 600;
+}
+.login-container a:hover {
+  text-decoration: underline;
+}
+#register-form {
+  display: none;
+}
+
+/* --------------------------АДАПТИВНІСТЬ-------------------------- */
+@media (max-width: 1200px) {
+  .recipe-page {
+    padding: 30px 40px;
+  }
+  .recipe-photo {
+    width: 70%;
+  }
+}
+
+@media (max-width: 992px) {
+  header.header {
+    padding: 10px 30px;
+  }
+  .recipe-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .account-page {
+    padding: 40px;
+  }
+  .recipe-photo {
+    width: 80%;
+  }
+}
+
+@media (max-width: 900px) {
+  .recipe-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #fff;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  nav.active {
+    display: flex;
+  }
+  nav a {
+    margin: 10px 0;
+    font-size: 20px;
+  }
+  .burger {
+    display: flex;
+  }
+  main {
+    padding: 0 10px;
+  }
+  .featured {
+    padding: 20px;
+  }
+  .recipe-title {
+    font-size: 15px;
+  }
+  .recipe-card {
+    height: 160px;
+  }
+  .about-content,
+  .contacts-content {
+    padding: 0 10px;
+  }
+  .account-page {
+    padding: 30px;
+  }
+  .account-content h1 {
+    font-size: 26px;
+  }
+  .login-page {
+    padding: 20px;
+  }
+  .recipe-page {
+    padding: 20px;
+  }
+  .recipe-header h1 {
+    font-size: 24px;
+  }
+  .recipe-header .meta {
+    font-size: 14px;
+  }
+  .actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+  }
+  .directions h2 {
+    font-size: 18px;
+  }
+  .ingredients p {
+    padding: 0 15px;
+    font-size: 16px;
+    text-align: justify;
+  }
+  .recipe-photo {
+    width: 90%;
+    max-width: 100%;
+    margin: 15px auto;
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .recipe-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .recipe-card {
+    height: 220px;
+  }
+  .recipe-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  header.header {
+    padding: 10px 20px;
+  }
+  .logo span {
+    font-size: 22px;
+  }
+  nav a {
+    font-size: 18px;
+  }
+  .search-section {
+    padding: 25px 10px;
+  }
+  .search-box {
+    gap: 6px;
+  }
+  .search-box input {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  .icon-btn {
+    width: 24px;
+    height: 24px;
+  }
+  .search-section h2 {
+    font-size: 20px;
+  }
+  .about,
+  .contacts {
+    padding: 15px;
+  }
+  .about-content h1,
+  .contacts-content h1 {
+    font-size: 24px;
+  }
+  .about-content p,
+  .contacts-content p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .account-page {
+    padding: 20px;
+  }
+  .profile-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-photo {
+    width: 90px;
+    height: 90px;
+  }
+  .profile-data p {
+    font-size: 16px;
+  }
+  .favorites h2 {
+    font-size: 20px;
+  }
+  .login-container {
+    padding: 25px;
+    max-width: 300px;
+  }
+  .login-container input {
+    font-size: 14px;
+  }
+  .recipe-page {
+    padding: 15px;
+  }
+  .recipe-header h1 {
+    font-size: 22px;
+  }
+  .recipe-header .meta {
+    font-size: 13px;
+  }
+  .recipe-photo {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .directions ol li,
+  .ingredients ul li,
+  .ingredients p {
+    font-size: 16px;
+  }
+}
+
