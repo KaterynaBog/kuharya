@@ -150,6 +150,11 @@
   color: #bd2c2c;
   margin-bottom: 20px;
 }
+.login-container {
+    width: 100%;
+    max-width: 350px !important;
+    box-sizing: border-box;
+}
 .login-container input {
   width: 100%;
   padding: 10px;
@@ -217,6 +222,14 @@
   .recipe-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .recipe-details {
+        grid-template-columns: 1fr;
+  }
+
+  .recipe-photo {
+        margin: 0 auto;
+  }
 }
 
 @media (max-width: 900px) {
@@ -265,7 +278,9 @@
     font-size: 26px;
   }
   .login-page {
-    padding: 20px;
+    padding: 10px;
+    box-sizing:border-box;
+    width:100%;
   }
   .recipe-page {
     padding: 20px;

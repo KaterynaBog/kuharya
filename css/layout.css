@@ -10,6 +10,7 @@ header.header {
   border-bottom: 1px solid #ddd;
 }
 
+
 .logo {
   display: flex;
   align-items: center;
@@ -172,11 +173,14 @@ nav a:hover {
   gap: 30px;
   margin-bottom: 40px;
   flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 /* --------------------------СТОРІНКА РЕЦЕПТУ-------------------------- */
 .recipe-page {
-  padding: 40px 80px;
+  padding: 20px;
+  max-width: 100%;
+  box-sizing: border-box;
   text-align: left;
 }
 .recipe-header .meta {
@@ -192,17 +196,22 @@ nav a:hover {
 }
 .recipe-photo {
   display: block;
-  width: 60%;
-  max-width: 600px;
+  width: 100%;
+  max-width: 650px;
   height: auto;
-  margin: 0 0 0 40px;
+  margin: 0 auto;
   border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 .recipe-details {
-  display: block;
-  margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    margin-bottom: 40px;
+    width: 100%;
+    box-sizing: border-box;
 }
 .ingredients, .facts {
   display: block;
@@ -279,4 +288,24 @@ footer {
 }
 .burger.active span:nth-child(3) {
   transform: rotate(-45deg) translateY(-6px);
+}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+}
+/* === УНІВЕРСАЛЬНЕ МОБІЛЬНЕ  ДЛЯ ВСІХ СТОРІНОК === */
+@media (max-width: 480px) {
+    main,
+    .about,
+    .contacts,
+    .account-page,
+    .recipe-page,
+    .login-page {
+        padding: 10px !important;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
 }
