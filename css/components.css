@@ -29,6 +29,37 @@
   margin-bottom: 15px;
 }
 
+/* --------------------------АКОРДЕОН (Показати більше)-------------------------- */
+.accordion {
+  margin-top: 20px;
+  text-align: center;
+}
+.accordion-toggle {
+  background: #bd2c2c;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.accordion-toggle:focus {
+  outline: 2px solid rgba(189,44,44,0.25);
+}
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  margin-top: 10px;
+}
+.accordion-content.open {
+  max-height: 400px;
+  padding: 12px 18px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+}
+
 
 /* --------------------------СТОРІНКА КОНТАКТИ-------------------------- */
 
