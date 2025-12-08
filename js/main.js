@@ -135,6 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("Новий базовий шрифт:", fontSize + "px");
     }
  });
+
  // кнопка зміни теми 
 const themeBtn = document.createElement('button');
 themeBtn.id = 'theme-toggle';
@@ -167,9 +168,21 @@ themeBtn.onmouseleave = () => themeBtn.style.transform = 'scale(1)';
 
 document.body.appendChild(themeBtn);
 
+// Завантаження збереженої теми з localStorage
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+    document.body.classList.add('dark-theme');
+    themeBtn.innerHTML = '☀️';
+    themeBtn.style.background = '#f1c40f';
+    themeBtn.style.color = '#333';
+}
+
 themeBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark-theme');
     const isDark = document.body.classList.contains('dark-theme');
+    
+    // Збереження теми в localStorage
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
     
     themeBtn.innerHTML = isDark ? '☀️' : '🌙';
     themeBtn.style.background = isDark ? '#f1c40f' : '#bd2c2c';
