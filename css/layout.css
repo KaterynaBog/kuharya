@@ -31,7 +31,7 @@ header.header {
 }
 .logo span {
   font-family: "Great Vibes";
-  font-size: 30px;
+  font-size: 1.875rem;
   color: #040404;
   letter-spacing: 0px;
   font-weight: 550;
@@ -44,7 +44,7 @@ nav a {
   margin: 0 20px;
   text-decoration: none;
   color: #000;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
   transition: color 0.3s;
   font-family: "Montserrat", sans-serif;
@@ -70,7 +70,7 @@ nav a:hover {
 .lang {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #040404;
   padding: 4px 0;
   cursor: default;
@@ -100,7 +100,7 @@ nav a:hover {
 .search-box input {
   flex: 1;               /* займає весь вільний простір */
   padding: 12px 15px;
-  font-size: 16px;
+  font-size: 1rem;
   border: 1px solid #bd2c2c;
   border-radius: 20px;
 }
@@ -133,7 +133,7 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 1.5rem;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -205,14 +205,14 @@ nav a:hover {
   text-align: left;
 }
 .recipe-header .meta {
-  font-size: 16px;
+  font-size: 1px;
   color: #555;
   margin-bottom: 15px;
 }
 .actions {
   display: flex;
   gap: 20px;
-  font-size: 16px;
+  font-size: 1rem;
   margin-bottom: 25px;
 }
 .recipe-photo {
@@ -280,7 +280,7 @@ footer {
   align-items: center;
   padding: 16px 20px;
   background: #f5f5f5;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #555;
 }
 footer p {
@@ -358,4 +358,50 @@ main {
         box-sizing: border-box;
         margin: 0 auto;
     }
+}
+
+
+.nav-hover {
+    color: #cc0000 !important;
+    text-decoration: underline;
+}
+
+/*Зміна теми на темну */
+body.dark-theme {
+    background-color: #1a1a1a !important; /* Дуже темний сірий */
+}
+
+/* Зміна фону  */
+body.dark-theme main, 
+body.dark-theme section, 
+body.dark-theme article {
+    background-color: #1a1a1a !important;
+}
+
+/*для іконок */
+body.dark-theme .header img,
+body.dark-theme .search-bar img {
+    filter: brightness(0) invert(1) !important;
+}
+/*текст світлий у темній темі */
+body.dark-theme,
+body.dark-theme p,
+body.dark-theme li,
+body.dark-theme span,
+body.dark-theme div,
+body.dark-theme a:not(.nav-hover) {
+    color: #e0e0e0 !important; 
+}
+
+/* Окремо для списків інгредієнтів та кроків приготування */
+body.dark-theme .ingredients ul li,
+body.dark-theme .directions ol li,
+body.dark-theme .ingredients p {
+    color: #ffffff !important;
+}
+
+
+/* Підсвічуємо посилання, щоб вони не губилися */
+body.dark-theme a {
+    color: #4da6ff;
 }

@@ -1,5 +1,7 @@
+ 
 // --------------------- Вхід / Реєстрація ---------------------
 document.addEventListener("DOMContentLoaded", () => {
+
   const showRegister = document.getElementById("show-register");
   const showLogin = document.getElementById("show-login");
   const loginForm = document.getElementById("login-form");
@@ -21,6 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
       title.textContent = "Вхід";
     });
   }
+
+  // --------------------- Бургер меню ---------------------
   const burger = document.getElementById("burger");
   const nav = document.querySelector("nav");
 
@@ -31,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --------------------- Додавання нового елемента в кінець main ---------------------
+  // --------------------- Новий елемент у main ---------------------
   const mainElement = document.querySelector("main");
   if (mainElement && !mainElement.classList.contains("about") && !mainElement.classList.contains("contacts") && !mainElement.classList.contains("account-page") && !mainElement.classList.contains("recipe-page") && !mainElement.classList.contains("login-page")) {
     const newSection = document.createElement("section");
@@ -50,49 +54,125 @@ document.addEventListener("DOMContentLoaded", () => {
     newSection.appendChild(newParagraph);
     mainElement.appendChild(newSection);
   }
-    // --------------------- Поточна дата ---------------------
-    const footerEl = document.querySelector('footer');
-    if (footerEl && !footerEl.querySelector('.site-date')) {
-      const now = new Date();
-      const dateStr = now.toLocaleDateString('uk-UA', { year: 'numeric', month: 'long', day: 'numeric' });
-      const dateSpan = document.createElement('span');
-      dateSpan.className = 'site-date';
-      dateSpan.textContent = `Дата: ${dateStr}`;
-      footerEl.appendChild(dateSpan);
+
+  // --------------------- Дата у футері ---------------------
+  const footerEl = document.querySelector('footer');
+  if (footerEl && !footerEl.querySelector('.site-date')) {
+    const now = new Date();
+    const dateStr = now.toLocaleDateString('uk-UA', { year: 'numeric', month: 'long', day: 'numeric' });
+    const dateSpan = document.createElement('span');
+    dateSpan.className = 'site-date';
+    dateSpan.textContent = `Дата: ${dateStr}`;
+    footerEl.appendChild(dateSpan);
+  }
+
+  // --------------------- Акордеон (Сторінка About) ---------------------
+  const aboutMain = document.querySelector('main.about');
+  if (aboutMain && !aboutMain.querySelector('.accordion')) {
+    const accWrap = document.createElement('div');
+    accWrap.className = 'accordion';
+
+    const btn = document.createElement('button');
+    btn.className = 'accordion-toggle';
+    btn.type = 'button';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.textContent = 'Показати більше';
+
+    const content = document.createElement('div');
+    content.className = 'accordion-content';
+    content.innerHTML = "<p>Кухарія — це спільнота, де ми ділимося традиційними рецептами, порадами з приготування та історіями, пов'язаними з їжею.</p>";
+
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      content.classList.toggle('open');
+      btn.textContent = expanded ? 'Показати більше' : 'Приховати';
+    });
+
+    accWrap.appendChild(btn);
+    accWrap.appendChild(content);
+
+    const aboutContent = aboutMain.querySelector('.about-content');
+    if (aboutContent) {
+      aboutContent.appendChild(accWrap);
+    } else {
+      aboutMain.appendChild(accWrap);
     }
+  }
 
-    // --------------------- Акордеон ---------------------
-    const aboutMain = document.querySelector('main.about');
-    if (aboutMain && !aboutMain.querySelector('.accordion')) {
-      const accWrap = document.createElement('div');
-      accWrap.className = 'accordion';
+  
+  // підсвітка навігації
+  const navLinks = document.querySelectorAll("nav a");
 
-      const btn = document.createElement('button');
-      btn.className = 'accordion-toggle';
-      btn.type = 'button';
-      btn.setAttribute('aria-expanded', 'false');
-      btn.textContent = 'Показати більше';
-
-      const content = document.createElement('div');
-      content.className = 'accordion-content';
-      content.innerHTML = "<p>Кухарія — це спільнота, де ми ділимося традиційними рецептами, порадами з приготування та історіями, пов'язаними з їжею. Приєднуйтесь та надсилайте свої рецепти!</p>";
-
-      btn.addEventListener('click', () => {
-        const expanded = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!expanded));
-        content.classList.toggle('open');
-        btn.textContent = expanded ? 'Показати більше' : 'Приховати';
+  navLinks.forEach(link => {
+      link.addEventListener("mouseenter", () => {
+          link.classList.add("nav-hover");
       });
 
-      accWrap.appendChild(btn);
-      accWrap.appendChild(content);
-
-      // Розмістити акордеон під основним вмістом about-content
-      const aboutContent = aboutMain.querySelector('.about-content');
-      if (aboutContent) {
-        aboutContent.appendChild(accWrap);
-      } else {
-        aboutMain.appendChild(accWrap);
-      }
-    }
+      link.addEventListener("mouseleave", () => {
+          link.classList.remove("nav-hover");
+      });
   });
+
+  // зміна розміру шрифту (ArrowUp / ArrowDown)
+  
+   let fontSize = 16; // початковий розмір у пікселях
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowUp" || e.key === "ArrowDown") {
+        e.preventDefault(); // запобігання прокрутці сторінки
+
+        if (e.key === "ArrowUp") {
+            fontSize += 2;
+        } else if (e.key === "ArrowDown") {
+            fontSize -= 2;
+            if (fontSize < 10) fontSize = 10; // обмеження мінімального розміру
+        }
+
+        
+        document.documentElement.style.fontSize = fontSize + "px";
+        
+        console.log("Новий базовий шрифт:", fontSize + "px");
+    }
+ });
+ // кнопка зміни теми 
+const themeBtn = document.createElement('button');
+themeBtn.id = 'theme-toggle';
+themeBtn.innerHTML = '🌙';
+
+
+themeBtn.style.cssText = `
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: #bd2c2c;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, background 0.3s;
+`;
+
+// ефект при наведенні
+themeBtn.onmouseover = () => themeBtn.style.transform = 'scale(1.1)';
+themeBtn.onmouseleave = () => themeBtn.style.transform = 'scale(1)';
+
+document.body.appendChild(themeBtn);
+
+themeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+    const isDark = document.body.classList.contains('dark-theme');
+    
+    themeBtn.innerHTML = isDark ? '☀️' : '🌙';
+    themeBtn.style.background = isDark ? '#f1c40f' : '#bd2c2c';
+    themeBtn.style.color = isDark ? '#333' : '#fff';
+});
+});

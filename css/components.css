@@ -9,7 +9,7 @@
   color: #000;
   text-decoration: none;
   margin-bottom: 6px;
-  font-size: 16px;
+  font-size: 1rem;
 }
 .recipe-title:hover {
   color: #bd2c2c;
@@ -19,12 +19,12 @@
 /* --------------------------СТОРІНКА ПРО НАС-------------------------- */
 
 .about-content h1 {
-  font-size: 32px;
+  font-size: 2rem;
   color: #bd2c2c;
   margin-bottom: 20px;
 }
 .about-content p {
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.6;
   margin-bottom: 15px;
 }
@@ -64,12 +64,12 @@
 /* --------------------------СТОРІНКА КОНТАКТИ-------------------------- */
 
 .contacts-content h1 {
-  font-size: 32px;
+  font-size: 2rem;
   color: #bd2c2c;
   margin-bottom: 20px;
 }
 .contacts-content p {
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.6;
   margin-bottom: 10px;
 }
@@ -92,7 +92,7 @@
 /* --------------------------СТОРІНКА АКАУНТУ-------------------------- */
 
 .account-content h1 {
-  font-size: 32px;
+  font-size: 2rem;
   color: #bd2c2c;
   margin-bottom: 30px;
 }
@@ -105,11 +105,11 @@
   border: 2px solid #bd2c2c;
 }
 .profile-data p {
-  font-size: 18px;
+  font-size: 1.125rem;
   margin: 8px 0;
 }
 .favorites h2 {
-  font-size: 24px;
+  font-size: 1.25rem;
   color: #000;
   margin-bottom: 15px;
   margin-top: 40px;
@@ -120,7 +120,7 @@
 
 
 .recipe-header h1 {
-  font-size: 32px;
+  font-size: 2rem;
   color: #bd2c2c;
   margin-bottom: 10px;
 }
@@ -132,12 +132,12 @@
   margin: 0 0 0 0;
 }
 .ingredients p {
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.7;
   color: #333;
 }
 .ingredients ul li {
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.8;
   color: #222;
   margin-bottom: 6px;
@@ -148,7 +148,7 @@
   margin-bottom: 10px;
 }
 .directions ol li {
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.8;
   margin-bottom: 10px;
   color: #222;
@@ -162,7 +162,7 @@
   font-family: "Montserrat", sans-serif;
 }
 .history p {
-  font-size: 18px;      
+  font-size: 1.125rem;      
   line-height: 1.8;     
   color: #333;        
   margin-bottom: 10px;  
@@ -202,7 +202,7 @@
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1rem;
   margin-top: 10px;
 }
 .login-container button:hover {
@@ -210,7 +210,7 @@
 }
 .login-container p {
   margin-top: 15px;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .login-container a {
   color: #bd2c2c;
@@ -281,7 +281,7 @@
   }
   nav a {
     margin: 10px 0;
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   .burger {
     display: flex;
@@ -293,7 +293,7 @@
     padding: 20px;
   }
   .recipe-title {
-    font-size: 15px;
+    font-size: 0.9375rem;
   }
   .recipe-card {
     height: 160px;
@@ -306,7 +306,7 @@
     padding: 30px;
   }
   .account-content h1 {
-    font-size: 26px;
+    font-size: 1.625rem;
   }
   .login-page {
     padding: 10px;
@@ -317,23 +317,23 @@
     padding: 20px;
   }
   .recipe-header h1 {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
   .recipe-header .meta {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .actions {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .directions h2 {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
   .ingredients p {
     padding: 0 15px;
-    font-size: 16px;
+    font-size: 1rem;
     text-align: justify;
   }
   .recipe-photo {
@@ -353,22 +353,22 @@
     height: 220px;
   }
   .recipe-title {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
 @media (max-width: 480px) {
   body {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   header.header {
     padding: 10px 20px;
   }
   .logo span {
-    font-size: 22px;
+    font-size: 1.375rem;
   }
   nav a {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
   .search-section {
     padding: 25px 10px;
@@ -378,14 +378,14 @@
   }
   .search-box input {
     padding: 10px 12px;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .icon-btn {
     width: 24px;
     height: 24px;
   }
   .search-section h2 {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   .about,
   .contacts {
@@ -393,11 +393,11 @@
   }
   .about-content h1,
   .contacts-content h1 {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
   .about-content p,
   .contacts-content p {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.5;
   }
   .account-page {
@@ -412,26 +412,26 @@
     height: 90px;
   }
   .profile-data p {
-    font-size: 16px;
+    font-size: 1rem;
   }
   .favorites h2 {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   .login-container {
     padding: 25px;
     max-width: 300px;
   }
   .login-container input {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .recipe-page {
     padding: 15px;
   }
   .recipe-header h1 {
-    font-size: 22px;
+    font-size: 1.375rem;
   }
   .recipe-header .meta {
-    font-size: 13px;
+    font-size: 0.8125rem;
   }
   .recipe-photo {
     width: 100%;
@@ -440,7 +440,7 @@
   .directions ol li,
   .ingredients ul li,
   .ingredients p {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 
