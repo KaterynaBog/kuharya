@@ -99,7 +99,100 @@ document.addEventListener("DOMContentLoaded", () => {
       aboutMain.appendChild(accWrap);
     }
   }
+// --------------------- Контактна форма ---------------------
+  const form = document.getElementById('contact-form');
+  if (form) {
+    const nameInput = form.querySelector('#name');
+    const emailInput = form.querySelector('#email');
+    const messageInput = form.querySelector('#message');
 
+    const nameError = form.querySelector('#name-error');
+    const emailError = form.querySelector('#email-error');
+    const messageError = form.querySelector('#message-error');
+
+    const successBox = document.getElementById('form-success');
+    const outputBox = document.getElementById('form-output');
+
+    function clearErrors() {
+      [nameInput, emailInput, messageInput].forEach((input) => {
+        if (input) input.classList.remove('input-error');
+      });
+
+      [nameError, emailError, messageError].forEach((el) => {
+        if (el) el.textContent = '';
+      });
+
+      if (successBox) {
+        successBox.textContent = '';
+        successBox.classList.remove('visible');
+      }
+    }
+
+    function isValidEmail(value) {
+      return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(value);
+    }
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault(); // блокуємо стандартну відправку
+      clearErrors();
+
+      let isValid = true;
+
+      const nameValue = nameInput ? nameInput.value.trim() : '';
+      const emailValue = emailInput ? emailInput.value.trim() : '';
+      const messageValue = messageInput ? messageInput.value.trim() : '';
+
+      // Ім'я ≥ 3 символи
+      if (nameInput && nameValue.length < 3) {
+        isValid = false;
+        nameInput.classList.add('input-error');
+        if (nameError) {
+          nameError.textContent = "Ім'я має містити мінімум 3 символи.";
+        }
+      }
+
+      // Email
+      if (emailInput && !isValidEmail(emailValue)) {
+        isValid = false;
+        emailInput.classList.add('input-error');
+        if (emailError) {
+          emailError.textContent = 'Введіть коректний email (має містити @ і домен).';
+        }
+      }
+
+      // Повідомлення ≥ 10 символів
+      if (messageInput && messageValue.length < 10) {
+        isValid = false;
+        messageInput.classList.add('input-error');
+        if (messageError) {
+          messageError.textContent = 'Повідомлення має містити не менше 10 символів.';
+        }
+      }
+
+      // Вивід даних
+      console.log('--- Дані форми ---');
+      console.log("Ім'я:", nameValue);
+      console.log('Email:', emailValue);
+      console.log('Повідомлення:', messageValue);
+
+      if (outputBox) {
+        outputBox.innerHTML = `
+          <p><strong>Ім'я:</strong> ${nameValue || '-'} </p>
+          <p><strong>Email:</strong> ${emailValue || '-'} </p>
+          <p><strong>Повідомлення:</strong> ${messageValue || '-'} </p>
+        `;
+      }
+
+      // Якщо все пройшло
+      if (isValid) {
+        form.reset();
+        if (successBox) {
+          successBox.textContent = 'Форма успішно надіслана!';
+          successBox.classList.add('visible');
+        }
+      }
+    });
+  }
   
   // підсвітка навігації
   const navLinks = document.querySelectorAll("nav a");
