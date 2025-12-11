@@ -49,21 +49,40 @@
     </ul>
   </div>
 
-  <div class="contacts-accordion">
-    <button class="accordion-toggle" type="button">
-      Написати нам
-      <span class="accordion-icon">+</span>
-    </button>
+  <!-- кнопка для відкриття форми -->
+<button class="contact-accordion-toggle" aria-expanded="false">
+    Написати нам +
+</button>
 
-    <div class="accordion-panel">
-      <form id="contact-form">
-        <input type="text" name="name" placeholder="Ім’я">
-        <input type="email" name="email" placeholder="Email">
-        <textarea name="message" rows="4" placeholder="Повідомлення"></textarea>
+<!-- прихований акордеон з формою -->
+<div class="contact-accordion-content">
+    <form id="contact-form" class="contact-form">
+
+        <div class="form-group">
+            <label for="name">Ім'я</label>
+            <input type="text" id="name" name="name">
+            <div class="error-message" id="name-error"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email">
+            <div class="error-message" id="email-error"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Повідомлення</label>
+            <textarea id="message" name="message"></textarea>
+            <div class="error-message" id="message-error"></div>
+        </div>
+
         <button type="submit">Надіслати</button>
-      </form>
-    </div>
-  </div>
+
+        <div id="form-success" class="form-success"></div>
+        <div id="form-output" class="form-output"></div>
+    </form>
+</div>
+
 </section>
 
     </div>
