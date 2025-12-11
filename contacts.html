@@ -49,31 +49,40 @@
         <li><a href="#">Facebook</a></li>
         <li><a href="#">YouTube</a></li>
       </ul>
-      <form id="contact-form" class="contact-form">
-  <div class="form-group">
-    <label for="name">Ім'я</label>
-    <input type="text" id="name" name="name">
-    <div class="error-message" id="name-error"></div>
+      <section class="contacts">
+  <div class="contacts-info">
+    <h2>Контакти</h2>
+    <p>Ми завжди раді вашим відгукам, ідеям та пропозиціям...</p>
+
+    <p><strong>Email:</strong> kuharya.info@gmail.com</p>
+    <p><strong>Телефон:</strong> +380 67 123 45 67</p>
+    <p><strong>Адреса:</strong> м. Київ, вул. Смачна, 12</p>
+
+    <p><strong>Ми також у соцмережах:</strong></p>
+    <ul class="contacts-social">
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">YouTube</a></li>
+    </ul>
   </div>
 
-  <div class="form-group">
-    <label for="email">Email</label>
-    <input type="text" id="email" name="email">
-    <div class="error-message" id="email-error"></div>
+  <div class="contacts-accordion">
+    <button class="accordion-toggle" type="button">
+      Написати нам
+      <span class="accordion-icon">+</span>
+    </button>
+
+    <div class="accordion-panel">
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Ім’я">
+        <input type="email" name="email" placeholder="Email">
+        <textarea name="message" rows="4" placeholder="Повідомлення"></textarea>
+        <button type="submit">Надіслати</button>
+      </form>
+    </div>
   </div>
+</section>
 
-  <div class="form-group">
-    <label for="message">Повідомлення</label>
-    <textarea id="message" name="message" rows="4"></textarea>
-    <div class="error-message" id="message-error"></div>
-  </div>
-
-  <button type="submit">Надіслати</button>
-
-  <!-- Повідомлення про успіх + вивід даних -->
-  <div id="form-success" class="form-success"></div>
-  <div id="form-output" class="form-output"></div>
-</form>
     </div>
   </main>
 
