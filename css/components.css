@@ -94,10 +94,11 @@
 .contact-form {
   max-width: 420px;
   margin: 30px auto;        /* по центру */
-  padding: 20px;
-  background: #fffdf8;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 /* лейбли над полями */
@@ -166,36 +167,6 @@
 .form-output {
   margin-top: 8px;
   font-size: 14px;
-}
-.accordion-item {
-  border-radius: 8px;
-  overflow: hidden;
-}
-/* Темна тема для форми */
-body.dark .accordion-body {
-  background: #1c1c1c !important;
-  border-radius: 0 0 8px 8px;
-}
-
-body.dark #contact-form .form-control {
-  background: #2b2b2b !important;
-  color: #e5e5e5 !important;
-  border-color: #444 !important;
-}
-
-body.dark #contact-form .form-control::placeholder {
-  color: #aaaaaa !important;
-}
-
-body.dark #contact-form label {
-  color: #e5e5e5 !important;
-}
-
-/* Адаптація кнопки під темну тему */
-body.dark #contact-form button {
-  background-color: #c52b2b !important;
-  border-color: #c52b2b !important;
-  color: white !important;
 }
 
 /* --------------------------СТОРІНКА АКАУНТУ-------------------------- */
@@ -331,6 +302,79 @@ body.dark #contact-form button {
 }
 #register-form {
   display: none;
+}
+
+/* --------------------------ЧОРНА ТЕМА ДЛЯ ФОРМИ-------------------------- */
+
+body.dark-theme .accordion-toggle {
+  background: #bd2c2c;
+  color: #fff;
+}
+
+body.dark-theme .accordion-toggle:hover {
+  background: #ff6b6b;
+}
+
+body.dark-theme .accordion-content.open {
+  background: #2a2a2a;
+  border: 1px solid #444;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .contact-form {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+body.dark-theme .contact-form label {
+  color: #e0e0e0;
+}
+
+body.dark-theme .contact-form input,
+body.dark-theme .contact-form textarea {
+  background: #333;
+  color: #e0e0e0;
+  border: 1px solid #555;
+}
+
+body.dark-theme .contact-form input::placeholder,
+body.dark-theme .contact-form textarea::placeholder {
+  color: #999;
+}
+
+body.dark-theme .contact-form input:focus,
+body.dark-theme .contact-form textarea:focus {
+  outline: none;
+  border-color: #ff6b6b;
+  box-shadow: 0 0 5px rgba(255, 107, 107, 0.3);
+}
+
+body.dark-theme .contact-form button {
+  background: #bd2c2c;
+  color: #fff;
+}
+
+body.dark-theme .contact-form button:hover {
+  background: #ff6b6b;
+}
+
+body.dark-theme .contact-form .input-error {
+  border: 1px solid #ff6b6b !important;
+  box-shadow: 0 0 5px rgba(255, 107, 107, 0.3);
+}
+
+body.dark-theme .contact-form .error-message {
+  color: #ff8888;
+}
+
+body.dark-theme .contact-form .form-success {
+  color: #4ade80;
+}
+
+body.dark-theme .contact-form .form-output {
+  color: #e0e0e0;
 }
 
 /* --------------------------АДАПТИВНІСТЬ-------------------------- */
