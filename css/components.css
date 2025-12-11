@@ -171,6 +171,33 @@
   border-radius: 8px;
   overflow: hidden;
 }
+/* Темна тема для форми */
+body.dark .accordion-body {
+  background: #1c1c1c !important;
+  border-radius: 0 0 8px 8px;
+}
+
+body.dark #contact-form .form-control {
+  background: #2b2b2b !important;
+  color: #e5e5e5 !important;
+  border-color: #444 !important;
+}
+
+body.dark #contact-form .form-control::placeholder {
+  color: #aaaaaa !important;
+}
+
+body.dark #contact-form label {
+  color: #e5e5e5 !important;
+}
+
+/* Адаптація кнопки під темну тему */
+body.dark #contact-form button {
+  background-color: #c52b2b !important;
+  border-color: #c52b2b !important;
+  color: white !important;
+}
+
 /* --------------------------СТОРІНКА АКАУНТУ-------------------------- */
 
 .account-content h1 {
