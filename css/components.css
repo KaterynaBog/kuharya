@@ -167,7 +167,10 @@
   margin-top: 8px;
   font-size: 14px;
 }
-
+.accordion-item {
+  border-radius: 8px;
+  overflow: hidden;
+}
 /* --------------------------СТОРІНКА АКАУНТУ-------------------------- */
 
 .account-content h1 {
