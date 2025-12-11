@@ -99,6 +99,19 @@ document.addEventListener("DOMContentLoaded", () => {
       aboutMain.appendChild(accWrap);
     }
   }
+ // --------------------- Аккордеон для контактної форми ---------------------
+const contactToggle = document.querySelector('.contact-accordion-toggle');
+const contactContent = document.querySelector('.contact-accordion-content');
+
+if (contactToggle && contactContent) {
+    contactToggle.addEventListener('click', () => {
+        const expanded = contactToggle.getAttribute('aria-expanded') === 'true';
+        contactToggle.setAttribute('aria-expanded', String(!expanded));
+        contactContent.classList.toggle('open');
+        contactToggle.textContent = expanded ? 'Написати нам' : 'Приховати форму';
+    });
+}
+
 // --------------------- Контактна форма ---------------------
   const form = document.getElementById('contact-form');
   if (form) {
