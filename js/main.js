@@ -99,19 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
       aboutMain.appendChild(accWrap);
     }
   }
- // --------------------- Аккордеон для контактної форми ---------------------
-const contactToggle = document.querySelector('.contact-accordion-toggle');
-const contactContent = document.querySelector('.contact-accordion-content');
-
-if (contactToggle && contactContent) {
-    contactToggle.addEventListener('click', () => {
-        const expanded = contactToggle.getAttribute('aria-expanded') === 'true';
-        contactToggle.setAttribute('aria-expanded', String(!expanded));
-        contactContent.classList.toggle('open');
-        contactToggle.textContent = expanded ? 'Написати нам' : 'Приховати форму';
-    });
-}
-
 // --------------------- Контактна форма ---------------------
   const form = document.getElementById('contact-form');
   if (form) {
@@ -294,4 +281,20 @@ themeBtn.addEventListener('click', () => {
     themeBtn.style.background = isDark ? '#f1c40f' : '#bd2c2c';
     themeBtn.style.color = isDark ? '#333' : '#fff';
 });
+
+  // --------------------- Акордеон (Сторінка Контакти) ---------------------
+  const contactsMain = document.querySelector('main.contacts');
+  if (contactsMain) {
+    const accordionToggle = contactsMain.querySelector('.accordion-toggle');
+    const accordionContent = contactsMain.querySelector('.accordion-content');
+    
+    if (accordionToggle && accordionContent) {
+      accordionToggle.addEventListener('click', () => {
+        const expanded = accordionToggle.getAttribute('aria-expanded') === 'true';
+        accordionToggle.setAttribute('aria-expanded', String(!expanded));
+        accordionContent.classList.toggle('open');
+        accordionToggle.textContent = expanded ? 'Напишіть нам' : 'Закрити';
+      });
+    }
+  }
 });
