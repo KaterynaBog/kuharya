@@ -290,8 +290,8 @@ footer p {
   text-align: center; /* slogan centered */
 }
 footer .site-date {
-  grid-column: 3;
-  justify-self: end;
+  grid-column: 1;
+  justify-self: start;
   font-weight: 600;
 }
 
