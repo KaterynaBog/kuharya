@@ -88,6 +88,86 @@
 .contacts-content a:hover {
   text-decoration: underline;
 }
+/* --------------------------ФОРМА КОНТАКТІВ-------------------------- */
+
+/* робимо вузький охайний блок по центру */
+.contact-form {
+  max-width: 420px;
+  margin: 30px auto;        /* по центру */
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* лейбли над полями */
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* усі поля однакової ширини */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* відступи між групами */
+.contact-form .form-group {
+  margin-bottom: 16px;
+}
+
+/* кнопка */
+.contact-form button {
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #bd2c2c;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #a32323;
+}
+
+/* помилки і повідомлення залишаємо, тільки вирівняємо */
+.error-message {
+  color: #bd2c2c;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.input-error {
+  border: 1px solid #bd2c2c !important;
+  outline: none;
+}
+
+.form-success {
+  margin-top: 12px;
+  color: #1a7f2e;
+  font-weight: 600;
+  display: none;
+}
+
+.form-success.visible {
+  display: block;
+}
+
+.form-output {
+  margin-top: 8px;
+  font-size: 14px;
+}
 
 /* --------------------------СТОРІНКА АКАУНТУ-------------------------- */
 
@@ -222,6 +302,79 @@
 }
 #register-form {
   display: none;
+}
+
+/* --------------------------ЧОРНА ТЕМА ДЛЯ ФОРМИ-------------------------- */
+
+body.dark-theme .accordion-toggle {
+  background: #bd2c2c;
+  color: #fff;
+}
+
+body.dark-theme .accordion-toggle:hover {
+  background: #ff6b6b;
+}
+
+body.dark-theme .accordion-content.open {
+  background: #2a2a2a;
+  border: 1px solid #444;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .contact-form {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+body.dark-theme .contact-form label {
+  color: #e0e0e0;
+}
+
+body.dark-theme .contact-form input,
+body.dark-theme .contact-form textarea {
+  background: #333;
+  color: #e0e0e0;
+  border: 1px solid #555;
+}
+
+body.dark-theme .contact-form input::placeholder,
+body.dark-theme .contact-form textarea::placeholder {
+  color: #999;
+}
+
+body.dark-theme .contact-form input:focus,
+body.dark-theme .contact-form textarea:focus {
+  outline: none;
+  border-color: #ff6b6b;
+  box-shadow: 0 0 5px rgba(255, 107, 107, 0.3);
+}
+
+body.dark-theme .contact-form button {
+  background: #bd2c2c;
+  color: #fff;
+}
+
+body.dark-theme .contact-form button:hover {
+  background: #ff6b6b;
+}
+
+body.dark-theme .contact-form .input-error {
+  border: 1px solid #ff6b6b !important;
+  box-shadow: 0 0 5px rgba(255, 107, 107, 0.3);
+}
+
+body.dark-theme .contact-form .error-message {
+  color: #ff8888;
+}
+
+body.dark-theme .contact-form .form-success {
+  color: #4ade80;
+}
+
+body.dark-theme .contact-form .form-output {
+  color: #e0e0e0;
 }
 
 /* --------------------------АДАПТИВНІСТЬ-------------------------- */

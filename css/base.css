@@ -56,3 +56,58 @@ th {
   background: #f7f7f7;
   font-weight: 600;
 }
+
+/* темна тема */
+body.dark-theme {
+  background: #1a1a1a;
+  color: #e0e0e0;
+}
+
+body.dark-theme h1, 
+body.dark-theme h2, 
+body.dark-theme h3, 
+body.dark-theme h4, 
+body.dark-theme h5, 
+body.dark-theme h6 {
+  color: #ff6b6b;
+}
+
+body.dark-theme p {
+  color: #e0e0e0;
+}
+
+body.dark-theme a {
+  color: #ff8888;
+}
+
+body.dark-theme footer {
+  background: #000;
+  color: #e0e0e0;
+}
+
+body.dark-theme footer p {
+  color: #e0e0e0;
+}
+
+body.dark-theme footer .site-date {
+  color: #e0e0e0;
+}
+
+body.dark-theme .search-section {
+  background: #2a2a2a;
+}
+
+body.dark-theme .search-box input {
+  background: #333;
+  color: #e0e0e0;
+  border-color: #ff6b6b;
+}
+
+body.dark-theme .search-box input::placeholder {
+  color: #999;
+}
+
+body.dark-theme .icon-btn {
+  filter: invert(1) brightness(1.2);
+}
+
